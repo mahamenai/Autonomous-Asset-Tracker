@@ -67,8 +67,8 @@ while robot.step(time_step) != -1:
                 object_center_x = x + (w / 2)
                 image_center_x = cam_width / 2
                 
-                cv2.rectangle(bgr_frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
-                cv2.circle(bgr_frame, (int(object_center_x), int(y + h/2)), 3, (255, 0, 0), -1)
+                cv2.rectangle(bgr_frame, (x, y), (x + w, y + h), (0, 255, 0), 1)
+                cv2.circle(bgr_frame, (int(object_center_x), int(y + h/2)), 1, (255, 0, 0), -1)
               
                 error = object_center_x - image_center_x 
                 steering_gain = 0.06
